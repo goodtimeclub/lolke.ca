@@ -4,10 +4,14 @@
 
 {{ partial "short-text" .Params.blurb}}
 
-{{ partial "2-up" .Params }}
+{{ partial "4-up" .Params }}
 
 {{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
 
-{{ partial "blog" . }}
+{{/* partial "blog" . */}}
+
+<section class="mw7 mw7-ns center bg-light-gray pa3 ph5-ns">
+    {{ partial "contact-form" . }}
+</section>
 
 {{ end }}
